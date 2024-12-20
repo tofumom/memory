@@ -1,0 +1,32 @@
+.memory {
+    animation: fadeInMove 1.5s ease-in-out; /* 더 부드러운 애니메이션 적용 */
+}
+
+@keyframes fadeInMove {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.8); /* 아래쪽에서 작게 시작 */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1); /* 제자리에서 크기 정상화 */
+    }
+    
+}
+.memory .delete-button {
+    position: absolute;
+    top: -15px; /* 모서리 위치 조정 */
+    right: -15px; /* 모서리 위치 조정 */
+    background: transparent; /* 배경 제거 */
+    color: black; /* X 표시 색상 */
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition:transform 0.2s ease;
+}
+
+.memory .delete-button:hover {
+    transform: scale(1.2); /* 버튼 확대 */
+    color: rgb(0, 0, 0); /* X 표시 강조 */
+}
+
